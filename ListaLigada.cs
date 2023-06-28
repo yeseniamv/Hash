@@ -28,23 +28,5 @@ namespace Hash
             nodoActual.Siguiente = new Nodo(valor);
         }
         
-        public void Relacionar(ListaLigada vertice)
-        {
-            
-            Agregar(vertice.nodoInicial.Valor);
-            
-        }
-
-        
-
-        
-        /*
-        public void Hasheo(ListaLigada vertice)
-        {
-            
-            int index;
-            byte[] bytes = Encoding.ASCII.GetBytes(vertice.nodoInicial.Valor);
-        }
-        */
     }
 }
