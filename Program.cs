@@ -21,14 +21,43 @@ namespace Hash
             ListaLigada Posicion4 = new ListaLigada("4");
             ListaLigada Posicion5 = new ListaLigada("5");
 
-
-
             hash.Add(Posicion0);
             hash.Add(Posicion1);
             hash.Add(Posicion2);
             hash.Add(Posicion3);
             hash.Add(Posicion4);
             hash.Add(Posicion5);
+
+            ListaLigada Valor1 = new ListaLigada("coc@da");
+            ListaLigada Valor2 = new ListaLigada("Burrito");
+            ListaLigada Valor3 = new ListaLigada("Machaca");
+            ListaLigada Valor4 = new ListaLigada("Horchata");
+            ListaLigada Valor5 = new ListaLigada("Churro");
+            ListaLigada Valor6 = new ListaLigada("Ice-cream");
+
+            int SumaASCII(string entrada)
+            {
+                int suma = 0;
+                foreach (var x in entrada)
+                {
+                    suma += (int)x;
+                }
+                return suma;
+            }
+
+            int GetIndex(string entrada)
+            {
+
+                int indice = SumaASCII(entrada) % 6;
+                return indice;
+            }
+            hash.ElementAt(GetIndex("coc@da")).Relacionar(Valor1);
+            hash.ElementAt(GetIndex("Burrito")).Relacionar(Valor2);
+            hash.ElementAt(GetIndex("Machaca")).Relacionar(Valor3);
+            hash.ElementAt(GetIndex("Horchata")).Relacionar(Valor4);
+            hash.ElementAt(GetIndex("Churro")).Relacionar(Valor5);
+            hash.ElementAt(GetIndex("Ice-cream")).Relacionar(Valor6);
+            Console.ReadKey();
 
         }
     }

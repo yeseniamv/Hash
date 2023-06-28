@@ -27,29 +27,17 @@ namespace Hash
             
             nodoActual.Siguiente = new Nodo(valor);
         }
-
+        
         public void Relacionar(ListaLigada vertice)
         {
-
-            Agregar(vertice.nodoInicial.Valor);
-        }
-
-        public int SumaASCII(string entrada)
-        {
-            int suma = 0;
-            foreach (var x in entrada)
-            {
-                suma += (int)x;
-            }
-            return suma;
-        }
-
-        public int GetIndex(string entrada)
-        {
             
-            int indice = SumaASCII(entrada) % 6;
-            return indice;
+            Agregar(vertice.nodoInicial.Valor);
+            
         }
+
+        
+
+        
         /*
         public void Hasheo(ListaLigada vertice)
         {
